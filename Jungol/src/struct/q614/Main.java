@@ -13,7 +13,7 @@ class Student {
 	
 	public void print() {
 		System.out.println(grade + " grade in "
-	+ schoolName + " School");
+	+ schoolName + " school");
 	}
 }
 
