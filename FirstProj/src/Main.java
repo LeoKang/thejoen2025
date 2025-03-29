@@ -1,19 +1,25 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String s = sc.next();
-		int i = sc.nextInt();
-		sc.close();
+		ArrayList<Integer> list = new ArrayList<>();
 
-		int index = s.length() - 1;
-
-		while (i != 0) {
-			System.out.print(s.charAt(index--));
-			i--;
-			if (index < 0)
+		while (true) {
+			int num = sc.nextInt();
+			list.add(num);
+			if (num >= 100)
 				break;
 		}
+		sc.close();
+
+		int sum = 0;
+		for (int num : list) {
+			sum += num;
+		}
+
+		System.out.println(sum);
+		System.out.printf("%.1f\n", (double) sum / list.size());
 	}
 }
